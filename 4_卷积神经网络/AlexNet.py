@@ -25,7 +25,7 @@ class Alexnet(nn.Module):
             nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=3, stride=2),
         )
-
+        self.avgpool = nn.AdaptiveAvgPool2d((6, 6)) #加入了ROI层，使得全连接层的输入维度是固定的，不会伴随输入维度的变化而变化
         self.layer2=nn.Sequential(
             nn.Dropout(p=0.5),
             nn.Linear(9216,4096,bias=True),
@@ -40,6 +40,7 @@ class Alexnet(nn.Module):
 
     def forward(self, x):
         x=self.layer1(x)
+        x=self.avgpool(x)
         x=x.view(-1,9216)
         x=self.layer2(x)
         return x
