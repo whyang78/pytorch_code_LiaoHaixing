@@ -9,5 +9,9 @@
     + 使用visdom显示loss曲线与生成图像  
 4. DCGAN学习mnist，详见 `dcgan.py`  
     + 使用卷积层与反卷积编写生成器与判别器  
+    + 使用visdom显示loss曲线与生成图像  
+5. WGAN学习mnist，详见 `wgan.py`  
+    + 使用卷积层编写生成器与判别器  
+    + 损失函数中添加gradient_penalty项  
     + 使用visdom显示loss曲线与生成图像
    
