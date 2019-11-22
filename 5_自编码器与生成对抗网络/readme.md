@@ -13,5 +13,6 @@
 5. WGAN学习mnist，详见 `wgan.py`  
     + 使用卷积层编写生成器与判别器  
     + 损失函数中添加gradient_penalty项  
-    + 使用visdom显示loss曲线与生成图像
+    + 使用visdom显示loss曲线与生成图像  
+    + 个人认为不太严谨  
    
