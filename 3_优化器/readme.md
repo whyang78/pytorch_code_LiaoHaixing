@@ -1,4 +1,4 @@
-##主要内容  
+## 主要内容  
 1. SGD实现，详见`SGD.py`  
     + 根据原理实现SGD优化算法，并调节batch_size和learning_rate观察其收敛效果。  
     + 得到结果图 `SGD.png`  
