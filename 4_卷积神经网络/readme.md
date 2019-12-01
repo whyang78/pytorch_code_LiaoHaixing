@@ -1,4 +1,4 @@
-##注意事项  
+## 注意事项  
 1. batchnorm批标准化的实现与应用，详见 `batch-normalization.ipynb`  
 2. 学习网络结构时，可以参照torchvision.models中相应模型实现的源代码。  
 3. Lenet网络实现，详见 `LeNet.py`  
