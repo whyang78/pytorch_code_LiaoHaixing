@@ -161,7 +161,7 @@ class WGAN_CP(object):
                 # Train with real images
                 d_loss_real = self.D(images)
                 d_loss_real = d_loss_real.mean(0).view(1)
-                d_loss_real.backward(one)
+                d_loss_real.backward(mone)
 
                 # Train with fake images
                 if self.cuda:
@@ -171,7 +171,7 @@ class WGAN_CP(object):
                 fake_images = self.G(z)
                 d_loss_fake = self.D(fake_images)
                 d_loss_fake = d_loss_fake.mean(0).view(1)
-                d_loss_fake.backward(mone)
+                d_loss_fake.backward(one)
 
                 d_loss = d_loss_fake - d_loss_real
                 Wasserstein_D = d_loss_real - d_loss_fake
@@ -190,7 +190,7 @@ class WGAN_CP(object):
             fake_images = self.G(z)
             g_loss = self.D(fake_images)
             g_loss = g_loss.mean().mean(0).view(1)
-            g_loss.backward(one)
+            g_loss.backward(mone)
             g_cost = -g_loss
             self.g_optimizer.step()
 
