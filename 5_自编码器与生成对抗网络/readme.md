@@ -15,4 +15,7 @@
     + 损失函数中添加gradient_penalty项  
     + 使用visdom显示loss曲线与生成图像  
     + 个人认为不太严谨  
+6. WGAN学习，代码较为准确。  
+    + WGAN配合权重裁剪，详见 `wgan_clipping.py`    
+    + WGAN配合gradient_penalty，详见 `wgan_gradient_penalty.py`  
    
